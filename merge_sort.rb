@@ -12,9 +12,7 @@ def merge_sort(array)
   merged + left + right
 end
 
-p merge_sort([3, 1, 0, 9, 5, 10, 3, 2, 7, 0, 8, 7, 13, 1])
-#=> [0, 0, 1, 1, 2, 3, 3, 5, 7, 7, 8, 9, 10, 13]
-
+puts 'Sorting an array of random numbers: '
 random_array = Array.new(rand(8..15)) { rand(0..50) }
 print "\nBefore: #{random_array}"
-print "\nAfter: #{merge_sort(random_array)}\n"
+print "\nAfter:  #{merge_sort(random_array)}\n"
