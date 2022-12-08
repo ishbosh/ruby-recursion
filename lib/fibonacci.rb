@@ -1,11 +1,7 @@
 def fibs(num)
-  fib = Array.new([num, 2].min) { |index| index }
-  loop do
-    break if fib.length == num
-
-    fib << (fib[-1] + fib[-2])
-  end
-  fib
+  arr = Array.new([num, 2].min) { |index| index }
+  arr << (arr[-1] + arr[-2]) until arr.length == num
+  arr
 end
 
 def fibs_rec(num)
